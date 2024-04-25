@@ -1,0 +1,136 @@
+@import url('https://fonts.cdnfonts.com/css/aileron');
+@import './abstracts/variables';
+@import './base/resets';
+@import './abstracts/functions';
+@import './themes/theme';
+
+
+
+/* Grundläggande */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    margin: 0;
+    padding: 20px;
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center
+    }
+}
+
+/* Huvudmeny */
+header {
+    @include gradient(#007bff);
+
+    background-color: $sekundär-färg;
+    border-radius: $border-radius;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    li {
+        list-style: none;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 60px;
+}
+
+.site_name {
+    font-size: 2em;
+    padding-right: 70px;
+}
+
+.nav-link {
+    transition: 0.7s ease;
+
+}
+
+.nav-link:hover {
+    color: $accent-färg;
+}
+
+/* HAMBURGERMENU START */
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: rgb(255, 255, 255);
+        z-index: -1;
+    }
+}
+
+
+
+
+/* Sektioner */
+section {
+    padding: 40px 20px;
+    max-width: 65ch;
+
+    h1 {
+        font-family: 'Aileron', sans-serif;
+        margin-bottom: 20px;
+        font-family: Aileron, sans-serif;
+        font-size: 2em;
+        font-weight: 400;
+        padding: 10px;
+        text-align: center;
+    }
+
+    p {
+        font-size: 1em;
+        line-height: 1.5;
+    }
+
+    img {
+        width: 80%;
+        margin: 20px auto;
+        display: flex;
+    }
+
+}
+
+.sass, .images {
+    @extend section;
+
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+    @include responsive-small(768px);
+}
+
+@media (min-width: 1200px) {
+    @include responsive-large(1200px);
+}
