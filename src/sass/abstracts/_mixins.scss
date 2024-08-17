@@ -17,4 +17,38 @@
     animation:pulserings-färger $duration $timing-function $iteration-count;
    }
 
-   
+   // mixin för textanimation
+@mixin text-effects($shadow-color, $rotation-angle, $font-size-start, $font-size-end) {
+
+  //  keyframes för animationen
+  @keyframes text-animation {
+    0% {
+      text-shadow: none;
+      transform: rotate(0deg);
+      font-size: $font-size-start;
+    }
+    50% {
+      text-shadow: 2px 2px 5px $shadow-color;
+      transform: rotate($rotation-angle);
+      font-size: $font-size-end;
+    }
+    100% {
+      text-shadow: none;
+      transform: rotate(0deg);
+      font-size: $font-size-start;
+    }
+  }
+
+  // animationen på elementet
+  animation: text-animation 3s ease-in-out infinite;
+  transition: all 0.5s ease-in-out;
+
+
+  &:hover {
+    text-shadow: 2px 2px 5px $shadow-color;
+    transform: rotate($rotation-angle);
+    font-size: $font-size-end;
+  }
+}
+
+

@@ -112,6 +112,9 @@ section {
     p {
         font-size: 1em;
         line-height: 1.5;
+        @include text-effects(#333, 10deg, 16px, 20px);
+        
+        
     }
 
     img {
@@ -180,7 +183,7 @@ section {
     font-size: 16px;
     background: #111;
     cursor: pointer;
-    position: relative;
+    position: absolute;
     border-radius: 10px;
   transition: all $hoverTransitionTime ease;
 }
