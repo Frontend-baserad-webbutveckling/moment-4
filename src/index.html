@@ -1,42 +1,50 @@
 <!DOCTYPE html>
 <html lang="sv">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Moment 4</title>
-    <link rel="stylesheet" href="sass/style.scss">
-</head>
-<body>
+    <link rel="stylesheet" href="sass/style.scss" />
+  </head>
+  <body>
     <header>
-        <nav class="navbar">
-            <a href="#sektion1" class="site_name">Moment 3</a>
-            <ul class="nav-menu">
+      <nav class="navbar">
+        <a href="#sektion1" class="site_name">Moment 4</a>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#sektion1" class="nav-link">Startsida</a>
+          </li>
 
-                <li class="nav-item">
-                    <a href="#sektion1" class="nav-link">Startsida</a>
-                <li class="nav-item">
-                    <a href="animering.html" class="nav-link">Animering</a>
-                <li class="nav-item">
-                    <a href="sass.html" class="nav-link">SASS</a>
-                <li class="nav-item">
-                    <a href="#sektion2" class="nav-link">Bilder</a>
-                <li class="nav-item">
-                    <a href="#sektion3" class="nav-link">Arbetsprocessen</a>
-                <li class="nav-item">
-                    <a href="#sektion4" class="nav-link">Ramschema</a>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </nav>
+          <li class="nav-item">
+            <a href="animering.html" class="nav-link">Animering</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="sass.html" class="nav-link">SASS</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#sektion2" class="nav-link">Bilder</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#sektion3" class="nav-link">Arbetsprocessen</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#sektion4" class="nav-link">Ramschema</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
     </header>
 
     <main>
-        <section id="sektion1">
+      <section id="sektion1">
           <h1>Uppgift</h1>
           <p>
             Inför moment 1 ska vi skapa en grundstruktur för webbutveckling
@@ -57,7 +65,6 @@
   
         <section id="sektion2">
           <h1>Bilder</h1>
-          <p>Innehåll för sektion 2.</p>
           <picture>
             <source
               srcset="images/wallhaven-2ywd3y.png?as=webp&width=1200"
@@ -99,7 +106,7 @@
         </section>
   
         <section id="sektion3">
-          <h1>Arbetsprocessen 3</h1>
+          <h1>Arbetsprocessen</h1>
           <p>
             Jag började med att skapa en mapp för moment 1. Genom kommandot npm
             init, så initierade jag ett nytt npm projekt där jag fyllde i mitt
@@ -130,9 +137,28 @@
             till dist-mappen
           </p>
         </section>
-      </main>
+    <section id="sektion4">
+      <h1>Ramschema</h1>
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Sök kurs (kurskod eller kursnamn)"
+      />
+      <table id="course-table">
+        <thead>
+          <tr>
+            <th class="click" data-type="code">Kurskod</th>
+            <th class="click" data-type="name">Kursnamn</th>
+            <th class="click" data-type="progression">Progression</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Rader fyllda från main.js -->
+        </tbody>
+      </table>
+    </section>
+  </main>
 
     <script src="js/main.js" type="module"></script>
-</body>
-
+  </body>
 </html>
